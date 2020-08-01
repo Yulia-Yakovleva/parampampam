@@ -1,0 +1,93 @@
+>HSG1-11 P.chlorelligerum KX669632.1
+>P.multimicronucleatum Wg8 JF741271.1  USA, VA
+>P.multimicronucleatum OLI-Parame-mult-01 FJ905143.1 USA?
+>P.multimicronucleatum MB2-5 JF741245.1 Moldova
+>P.multimicronucleatum OLI-Parame-mult-03 FJ905145.1 Japan
+>P.multimicronucleatum OLI-Parame-mult-02 FJ905144.1 USA?
+>P.multimicronucleatum haplotype C12 MH544200.1 China
+>P.multimicronucleatum haplotype C3(1) MH544190.1 China
+>P.multimicronucleatum haplotype C7 MH544195.1 China
+>P.multimicronucleatum haplotype C3(2) MH544191.1 China
+>P.multimicronucleatum L72-1 MT078145.1 Mexico
+>P.multimicronucleatum K4-2 MT078146.1 Mexico
+>P.multimicronucleatum Chp5-3 MT078147.1 Mexico
+>P.multimicronucleatum T42-1 MT078148.1 Mexico
+>P.multimicronucleatum SMM81-1 MT078149.1 Mexico
+>P.caudatum V-1 MT078150.1 Mexico
+>P.caudatum OLI-Parame-caud-01 FJ905142.1 USA?
+>P.caudatum OLI-Parame-caud-02 FJ905148.1 Russia, SPb
+>P.caudatum SH42 MG013510.1 Germany
+>P.caudatum HUN-BA, FN256277.1 haplotype PcCOI_a12 Hungary
+>P.caudatum CA JF304187.1 Cyprus
+>P.caudatum PcC30 JX082093.1 China
+>P.caudatum BRA-RIO FN256282.1 haplotype PcCOI_b03 Brazil
+>P.caudatum INK-1 HQ149722.1 Indonesia
+>P.caudatum K5-2 MT078151.1 Mexico
+>LB2 Mexico
+>“Paramecium germanicum” GO1 KM091240.1 Germany
+>strain 14 PP-2 Russia, Pskov region
+>SD11-9 Russia, SPb
+>HSG3-10 Russia, SPb
+>CB8-2 MN264581.1 (Rautian) China
+>G1-2 MN264582.1 (Rautian)
+>V105-1 MN264579.1 (Rautian) Russia, Vologda region
+>P.multimicronucleatum AMA5-7 MN264578.1 (Rautian)
+>P.multimicronucleatum AM MN264577.1 (Rautian)
+>P.multimicronucleatum GB4-26 MN264576.1 (Rautian) UK?
+>P. multimicronucleatum Kr113-3 JF741258.1 Russia, Krasnoyarsk
+>P.multimicronucleatum mult M04(ParameciumDB)Australia
+>P.multimicronucleatum Peniche31(ParameciumDB)Portugal
+>P.multimicronucleatum TRB101-1 JF741262.1 Russia, Baikal
+>P.multimicronucleatum TRB101-4 JF741263.1 Russia, Baikal
+>SK6-3 Mexico
+>R51-6 Mexico
+>ChP10-2 Mexico
+>ChP3-4 Mexico
+>E59-1B Mexico
+>SMM80-11 Mexico
+>CyL3-21 Cyprus
+>CyP5-3 Cyprus
+>PO16-1 (COIlongF needed) Russia, Pskov region
+>SP-1 Russia, SPb
+>Or4-4 Russia, Orenburg
+>N6 (OP13) Russia, SPb
+>N16 (Ns2-16) Russia, Novosibirsk
+>N12 (AB9-8) USA, MA
+>ThK-16 Thailand
+>P.multimicronucleatum BSP-7 AM072772.1 Brazil
+>P.multimicronucleatum SPb63-2 JF741248.1 Russia, SPb
+>P.multimicronucleatum ISN-11 AM072769.1 Italy
+>P.multimicronucleatum AH1-5 AM072768.1 Hawaii
+>P.multimicronucleatum BR JF304189.1 USA, LA
+>P.multimicronucleatum US_Bl 16I1 MK806287.1 USA, IN
+>P.multimicronucleatum haplotype C1(1) MH544185.1 China
+>P.multimicronucleatum haplotype C6 MH544194.1 China
+>P.caudatum INP-3 HQ149724.1 Indonesia
+>P.caudatum INL-1 HQ149723.1 Indonesia
+>mito_caud_C083 USA, IN
+>mito_caud_43c3d USA, IN
+>mito_caud_GB-E, UK
+>mito_caud_C026 USA, LA
+>mito_caud_C104 Spain
+>P.caudatum POE-1 HQ149725.1 Portugal
+>P.caudatum G-E12 FN256263.1 Germany
+>P.caudatum SLO-R FN256281.1 Slovenia
+>P.caudatum M3 KY399443.1
+>P.caudatum RanNy1602-AP18 MG589328.1 Germany
+>P.caudatum G-PL-2 FN256264.1 Germany
+>OmN-1 USA, NE
+>ID1-13 India
+>MSA-5 Malta
+>IP2-1 Italy
+>PL4-1 Portugal
+>227 MT318934 P.septaurelia
+>V1-4 PBIAU.V1-4.MITO.1.G040 P.biaurelia
+>51 M15281.1 P.tetraurelia
+>N1A PQUAD.NiA.MITO.1.G040 P.quadecaurelia
+>AZ8-4 PSEXA.AZ8-4.MITO.1.G040 P.sexaurelia
+>274 PDODE.274.MITO.1.G040 P.dodecaurelia
+>223 PDECA.223.MITO.1.G040 P.decaurelia
+>AZ9-3 PPRIM.AZ9-3.MITO.1.G040 P.primaurelia
+>TE PNOVA.TE.MITO.1.G040 P.novaurelia
+>M PJENN.M.MITO.1.G040 P.jenningsi
+>FT8 
