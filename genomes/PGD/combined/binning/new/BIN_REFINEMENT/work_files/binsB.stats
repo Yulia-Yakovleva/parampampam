@@ -1,0 +1,4 @@
+bin	completeness	contamination	GC	lineage	N50	size	binner
+bin.0	22.39	5.361	0.277	Archaea	11036	34178508	binsB
+bin.1	92.30	0.0	0.260	Bacteria	3711	7844878	binsB
+bin.2	99.68	0.316	0.658	Rhizobiales	99549	5676752	binsB

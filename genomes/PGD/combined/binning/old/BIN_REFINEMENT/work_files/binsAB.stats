@@ -1,0 +1,6 @@
+bin	completeness	contamination	GC	lineage	N50	size	binner
+Refined_1	0.0	0.0	0.686	root	9466	1534306	binsAB
+Refined_2	0.0	0.0	0.245	root	4392	6005447	binsAB
+Refined_3	0.0	0.0	0.665	root	18037	652263	binsAB
+Refined_4	52.15	0.0	0.295	Bacteria	9368	840059	binsAB
+Refined_5	0.0	0.0	0.351	root	2265	7283826	binsAB

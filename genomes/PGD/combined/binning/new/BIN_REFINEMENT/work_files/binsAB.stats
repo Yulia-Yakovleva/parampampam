@@ -1,0 +1,11 @@
+bin	completeness	contamination	GC	lineage	N50	size	binner
+Refined_1	85.71	0.0	0.326	Bacteria	84072	751320	binsAB
+Refined_10	3.607	0.0	0.518	Rhizobiales	19601	652224	binsAB
+Refined_2	0.0	0.0	0.273	root	14659	577091	binsAB
+Refined_3	0.0	0.0	0.288	root	16863	594692	binsAB
+Refined_4	12.44	2.647	0.276	Archaea	18258	13632354	binsAB
+Refined_5	0.0	0.0	0.289	root	15887	1048759	binsAB
+Refined_6	1.323	0.0	0.270	Archaea	13596	2565430	binsAB
+Refined_7	96.07	0.316	0.676	Rhizobiales	109678	5022948	binsAB
+Refined_8	6.296	0.0	0.282	Archaea	5067	13331265	binsAB
+Refined_9	6.451	0.0	0.256	Bacteria	2948	5969792	binsAB
