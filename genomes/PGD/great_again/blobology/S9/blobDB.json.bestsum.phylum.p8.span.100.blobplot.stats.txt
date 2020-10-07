@@ -1,8 +1,10 @@
 ## 1.1.1
+## spades=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/assembly_from_S9_raw_reads/contigs.fasta
+## covsum=Sum of cov in blobDB.json
 ## cov0=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9/map2cov.aln-pe_sorted.bam.cov
 ## cov1=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9/map2cov.aln-unpaired_sorted.bam.cov
-## covsum=Sum of cov in blobDB.json
-## spades=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/assembly_from_S9_raw_reads/contigs.fasta
-# name	colour	count_visible	count_visible_perc	span_visible	span_visible_perc	n50	gc_mean	gc_std	cov0_mean	cov0_std	cov0_read_map	cov0_read_map_p	cov1_mean	cov1_std	cov1_read_map	cov1_read_map_p	covsum_mean	covsum_std	covsum_read_map	covsum_read_map_p	spades_mean	spades_std	spades_read_map	spades_read_map_p
-all	None	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	96.3	613.3	44,937,436	0.0%	26.5	184.2	0	0.0%
-	#1f77b4	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	96.3	613.3	44,937,436	0.0%	26.5	184.2	0	0.0%
+## bam0=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/assembly_from_S9_raw_reads/mapping/aln-pe_sorted.bam
+## bam1=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/assembly_from_S9_raw_reads/mapping/aln-unpaired_sorted.bam
+# name	colour	count_visible	count_visible_perc	span_visible	span_visible_perc	n50	gc_mean	gc_std	bam0_mean	bam0_std	bam0_read_map	bam0_read_map_p	bam1_mean	bam1_std	bam1_read_map	bam1_read_map_p	cov0_mean	cov0_std	cov0_read_map	cov0_read_map_p	cov1_mean	cov1_std	cov1_read_map	cov1_read_map_p	covsum_mean	covsum_std	covsum_read_map	covsum_read_map_p	spades_mean	spades_std	spades_read_map	spades_read_map_p
+all	None	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	166.1	1062.7	89,874,872	0.0%	26.5	184.2	0	0.0%
+	#1f77b4	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	166.1	1062.7	89,874,872	0.0%	26.5	184.2	0	0.0%
