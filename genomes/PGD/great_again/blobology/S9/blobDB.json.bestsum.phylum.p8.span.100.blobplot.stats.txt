@@ -1,9 +1,8 @@
 ## 1.1.1
-## cov0=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9_map2cov.aln-pe_sorted.bam.cov
-## cov1=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9_map2cov.aln-unpaired_sorted.bam.cov
-## covsum=Sum of cov in S9.blobDB.json
+## cov0=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9/map2cov.aln-pe_sorted.bam.cov
+## cov1=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/blobology/S9/map2cov.aln-unpaired_sorted.bam.cov
+## covsum=Sum of cov in blobDB.json
 ## spades=/Bmo/jyakovleva/parampampam/genomes/PGD/great_again/assembly_from_S9_raw_reads/contigs.fasta
 # name	colour	count_visible	count_visible_perc	span_visible	span_visible_perc	n50	gc_mean	gc_std	cov0_mean	cov0_std	cov0_read_map	cov0_read_map_p	cov1_mean	cov1_std	cov1_read_map	cov1_read_map_p	covsum_mean	covsum_std	covsum_read_map	covsum_read_map_p	spades_mean	spades_std	spades_read_map	spades_read_map_p
-all	None	29,414	0.0%	56,268,117	0.0%	7,090	0.28	0.074	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	96.3	613.3	44,937,436	0.0%	26.5	184.2	0	0.0%
-undef	#1f77b4	9,343	100.0%	44,131,108	100.0%	9,881	0.31	0.097	87.7	159.4	39,368,284	0.0%	0.1	0.1	34,803	0.0%	118.4	211.6	39,403,087	0.0%	30.6	52.3	0	0.0%
-no-hit	#d3d3d3	20,071	0.0%	12,137,009	0.0%	798	0.27	0.056	61.3	537.5	5,530,535	0.0%	0.1	0.3	3,814	0.0%	86.0	728.0	5,534,349	0.0%	24.6	220.1	0	0.0%
+all	None	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	96.3	613.3	44,937,436	0.0%	26.5	184.2	0	0.0%
+	#1f77b4	29,414	0.0%	56,268,117	0.0%	7,090	0.0	0.0	69.7	453.2	44,898,819	0.0%	0.1	0.3	38,617	0.0%	96.3	613.3	44,937,436	0.0%	26.5	184.2	0	0.0%
