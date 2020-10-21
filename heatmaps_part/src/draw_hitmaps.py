@@ -11,6 +11,16 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
+def drop_duplicates(recs):
+    unique_ids = []
+    unique_records = []
+    for r in recs:
+        if r.id not in unique_ids:
+            unique_ids.append(r.id)
+            unique_records.append(r)
+    return tuple(unique_records)
+
+
 def get_seq_pairs(recs):
     # число возможных пар сочетаний без повторений
     c = tuple(itertools.combinations(recs, 2))
@@ -82,6 +92,7 @@ def make_blast_pairwise(pairs):
 def process_blast_result(alignments, param):
     data = []
     for aln in alignments:
+        print(aln)
         hsp = aln[0][0]  # first hit, first hsp
         ident = 0
         subst = 0
@@ -158,7 +169,10 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--type', type=str, help='Type of marker for folder distribution')
     args = parser.parse_args()
 
-    records = [r for r in SeqIO.parse(args.set, 'fasta')]
+    records = drop_duplicates([r for r in SeqIO.parse(args.set, 'fasta')])
+    # overwrite deduplicated set
+    with open(args.set, 'w') as outf:
+        SeqIO.write(records, outf, 'fasta')
     col_row_names = [r.name for r in records]
     df_LR = args.megax
 
