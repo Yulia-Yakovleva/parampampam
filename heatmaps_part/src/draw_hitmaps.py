@@ -129,12 +129,9 @@ def write_to_df(results, names, param, prefix, t):
 
 
 def draw_heatmap(df, param, prefix, t):
-    if param == 'pident':
-        sns.clustermap(df, vmin=90, vmax=100, cmap='rocket_r')
-    elif param == 'corr_pident':
-        sns.clustermap(df, vmin=0, vmax=0.5, cmap='rocket_r')
-    elif param == 'subst':
-        sns.clustermap(df, vmin=0, vmax=10, cmap='rocket_r')
+    mi = min(df.min())
+    ma = max(df.max())
+    sns.clustermap(df, vmin=mi, vmax=ma, cmap='rocket_r')
     plt.savefig(f"./results/{t}/hm/{prefix}_{param}.png", format='png')
 
 
@@ -145,8 +142,10 @@ def draw_from_megax(dfs, prefix, t):
     df_L.fillna(0, inplace=True)
     df = df_R + df_L
     print(df)
+    mi = min(df.min())
+    ma = max(df.max())
     df.to_csv(f"./results/{t}/csv/{prefix}_megax_dm.csv")
-    sns.clustermap(df, vmin=0, vmax=0.15, cmap='rocket_r')
+    sns.clustermap(df, vmin=mi, vmax=ma, cmap='rocket_r')
     plt.savefig(f"./results/{t}/hm/{prefix}_megax_dm.png", format='png')
 
 
