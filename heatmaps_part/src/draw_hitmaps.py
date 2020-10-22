@@ -6,7 +6,7 @@ import itertools
 import pandas as pd
 from Bio import SeqIO, AlignIO, SearchIO
 from Bio.Align.Applications import MuscleCommandline
-from Bio.Blast.Applications import NcbiblastxCommandline
+from Bio.Blast.Applications import NcbiblastnCommandline
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -75,15 +75,19 @@ def get_seq_pairs(recs):
 def make_blast_pairwise(pairs):
     alignments = []
     for p in pairs:
+        p[0].seq, p[1].seq = p[0].seq.upper(), p[1].seq.upper()
         SeqIO.write(p[0], 'query.fa', 'fasta')
         SeqIO.write(p[1], 'subject.fa', 'fasta')
-        blastx_cline = NcbiblastxCommandline(cmd='blastn',
-                                             query='query.fa',
-                                             subject='subject.fa',
-                                             out='result.xml',
-                                             outfmt=5)
-        stdout, stderr = blastx_cline()
+        blast_cline = NcbiblastnCommandline(cmd='blastn',
+                                            query='query.fa',
+                                            subject='subject.fa',
+                                            out='result.xml',
+                                            # dust='no',
+                                            # soft_masking='false',
+                                            outfmt='5')
+        stdout, stderr = blast_cline()
         result = SearchIO.read('result.xml', 'blast-xml')
+        print(result)
         alignments.append(result)
         [os.remove(f) for f in ['query.fa', 'subject.fa', 'result.xml']]
     return tuple(alignments)
@@ -92,7 +96,6 @@ def make_blast_pairwise(pairs):
 def process_blast_result(alignments, param):
     data = []
     for aln in alignments:
-        print(aln)
         hsp = aln[0][0]  # first hit, first hsp
         ident = 0
         subst = 0
@@ -119,6 +122,35 @@ def process_blast_result(alignments, param):
             # процент замен
             data.append((pair[0].id, pair[1].description, round(subst / length * 100, 3)))
     return tuple(data)
+
+
+def process_mafft_aln(pairs, param):
+    result = []
+    for pair in pairs:
+        ident = 0
+        subst = 0
+        gaps = 0
+        length = len(pair[0])
+        for let1, let2 in zip(pair[0].seq, pair[1].seq):
+            if let1 == let2:
+                ident += 1
+            else:
+                if let1 == '-' or let2 == '-':
+                    gaps += 1
+                elif let1 == 'N' or let2 == 'N':
+                    length -= 1
+                else:
+                    subst += 1
+        if param == 'pident':
+            # процент идентичности 60-100%
+            result.append((pair[0].id, pair[1].id, round(ident / length * 100, 3)))
+        elif param == 'corr_pident':
+            # sqrt(1-pident) 1-0, 0=max_indent
+            result.append((pair[0].id, pair[1].id, round(((1 - (ident / length)) ** 0.5), 3)))
+        elif param == 'subst':
+            # процент замен
+            result.append((pair[0].id, pair[1].id, round(subst  / length * 100, 3)))
+    return tuple(result)
 
 
 def write_to_df(results, names, param, prefix, t):
@@ -182,6 +214,7 @@ if __name__ == "__main__":
     alignments = make_blast_pairwise(combinations)
     for p in params:
         results = process_blast_result(alignments, param=p)
+        # results = process_mafft_aln(pairs=combinations, param=p)
         df = write_to_df(results, col_row_names, param=p, prefix=args.prefix, t=args.type)
         draw_heatmap(df, param=p, prefix=args.prefix, t=args.type)
     draw_from_megax(df_LR, prefix=args.prefix, t=args.type)
