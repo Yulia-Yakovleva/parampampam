@@ -87,7 +87,6 @@ def make_blast_pairwise(pairs):
                                             outfmt='5')
         stdout, stderr = blast_cline()
         result = SearchIO.read('result.xml', 'blast-xml')
-        print(result)
         alignments.append(result)
         [os.remove(f) for f in ['query.fa', 'subject.fa', 'result.xml']]
     return tuple(alignments)
@@ -115,6 +114,8 @@ def process_blast_result(alignments, param):
         if param == 'pident':
             # процент идентичности 60-100%
             data.append((pair[0].id, pair[1].description, round(ident / length * 100, 3)))
+            if pair[0].id == 'Pmult_TP2 India':
+                print(ident, length)
         elif param == 'corr_pident':
             # sqrt(1-pident) 1-0, 0=max_indent
             data.append((pair[0].id, pair[1].description, round(((1 - (ident / length)) ** 0.5), 3)))
@@ -171,14 +172,14 @@ def write_to_df(results, names, param, prefix, t):
     return df
 
 
-def draw_heatmap(df, param, prefix, t):
+def draw_heatmap(df, param, prefix, t, format):
     mi = min(df.min())
     ma = max(df.max())
     sns.clustermap(df, vmin=mi, vmax=ma, cmap='rocket_r')
-    plt.savefig(f"./results/{t}/hm/{prefix}_{param}.png", format='png')
+    plt.savefig(f"./results/{t}/hm/{prefix}_{param}.{format}", format=format)
 
 
-def draw_from_megax(dfs, prefix, t):
+def draw_from_megax(dfs, prefix, t, format):
     df_R = pd.read_csv(dfs[1], index_col=0)
     df_R.fillna(0, inplace=True)
     df_L = pd.read_csv(dfs[0], index_col=0)
@@ -189,7 +190,7 @@ def draw_from_megax(dfs, prefix, t):
     ma = max(df.max())
     df.to_csv(f"./results/{t}/csv/{prefix}_megax_dm.csv")
     sns.clustermap(df, vmin=mi, vmax=ma, cmap='rocket_r')
-    plt.savefig(f"./results/{t}/hm/{prefix}_megax_dm.png", format='png')
+    plt.savefig(f"./results/{t}/hm/{prefix}_megax_dm.{format}", format=format)
 
 
 if __name__ == "__main__":
@@ -209,6 +210,7 @@ if __name__ == "__main__":
     df_LR = args.megax
 
     params = ('pident', 'corr_pident', 'subst')
+    formats = ('png', 'svg', 'pdf')
 
     combinations = get_seq_pairs(records)
     alignments = make_blast_pairwise(combinations)
@@ -216,5 +218,7 @@ if __name__ == "__main__":
         results = process_blast_result(alignments, param=p)
         # results = process_mafft_aln(pairs=combinations, param=p)
         df = write_to_df(results, col_row_names, param=p, prefix=args.prefix, t=args.type)
-        draw_heatmap(df, param=p, prefix=args.prefix, t=args.type)
-    draw_from_megax(df_LR, prefix=args.prefix, t=args.type)
+        for f in formats:
+            draw_heatmap(df, param=p, prefix=args.prefix, t=args.type, format=f)
+    for f in formats:
+        draw_from_megax(df_LR, prefix=args.prefix, t=args.type, format=f)
