@@ -165,7 +165,6 @@ def write_to_df(results, names, param, prefix, t):
         val = res[2]
         df.loc[row_name, col_name] = val
         df.loc[col_name, row_name] = val
-    # df.loc['Pmult_BNB-2015', 'Pmult_BNB-2015'] = 'ПИСЬКА'
     print(param)
     print(df)
     df.to_csv(f"./results/{t}/csv/{prefix}_{param}.csv")
