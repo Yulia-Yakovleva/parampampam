@@ -1,0 +1,24 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    assembly  medaka_assembly_1_consensus  medaka_assembly_2_consensus  medaka_assembly_3_consensus
+# contigs (>= 0 bp)         315       243                          241                          238                        
+# contigs (>= 1000 bp)      307       241                          239                          236                        
+# contigs (>= 5000 bp)      251       228                          226                          223                        
+# contigs (>= 10000 bp)     199       192                          189                          186                        
+# contigs (>= 25000 bp)     140       140                          141                          141                        
+# contigs (>= 50000 bp)     120       121                          120                          120                        
+Total length (>= 0 bp)      32329712  32101582                     32137739                     32134007                   
+Total length (>= 1000 bp)   32324184  32100326                     32136481                     32132751                   
+Total length (>= 5000 bp)   32144434  32049278                     32085562                     32081830                   
+Total length (>= 10000 bp)  31758269  31780740                     31802978                     31798405                   
+Total length (>= 25000 bp)  30873848  30994456                     31080126                     31115178                   
+Total length (>= 50000 bp)  30132304  30298266                     30308400                     30344019                   
+# contigs                   315       243                          241                          238                        
+Largest contig              825024    828718                       828729                       828750                     
+Total length                32329712  32101582                     32137739                     32134007                   
+GC (%)                      28.65     28.52                        28.52                        28.52                      
+N50                         277586    280068                       280441                       280848                     
+N75                         202230    204655                       207158                       208682                     
+L50                         43        42                           42                           42                         
+L75                         77        76                           76                           76                         
+# N's per 100 kbp           0.31      0.00                         0.00                         0.00                       
